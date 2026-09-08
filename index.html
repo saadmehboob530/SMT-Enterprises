@@ -4,38 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>SMT Enterprises — Technology That Moves Your Business Forward</title>
+    <title>SMT Enterprises — Technology. Software. AI. Digital Solutions.</title>
     <meta
       name="description"
-      content="SMT Enterprises builds modern websites, e-commerce platforms, custom software, SaaS products and AI-powered automation systems that help businesses operate smarter and grow faster."
+      content="SMT Enterprises is a technology company building modern websites, e-commerce platforms, custom software, SaaS products and AI-powered automation for growing businesses."
     />
-    <meta name="theme-color" content="#05070d" />
+    <meta name="theme-color" content="#050505" />
     <link rel="canonical" href="https://www.smtenterprises.com/" />
     <meta name="robots" content="index, follow" />
 
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="SMT Enterprises" />
-    <meta property="og:title" content="SMT Enterprises — Technology That Moves Your Business Forward" />
+    <meta property="og:title" content="SMT Enterprises — Technology. Software. AI. Digital Solutions." />
     <meta
       property="og:description"
-      content="Modern websites, software, SaaS products and AI-powered automation — built by SMT Enterprises."
+      content="Modern websites, software, SaaS products and AI-powered automation, built by SMT Enterprises."
     />
     <meta property="og:url" content="https://www.smtenterprises.com/" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="SMT Enterprises — Technology That Moves Your Business Forward" />
+    <meta name="twitter:title" content="SMT Enterprises — Technology. Software. AI. Digital Solutions." />
     <meta
       name="twitter:description"
-      content="Modern websites, software, SaaS products and AI-powered automation — built by SMT Enterprises."
+      content="Modern websites, software, SaaS products and AI-powered automation, built by SMT Enterprises."
     />
 
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Instrument+Serif:ital@1&display=swap"
       rel="stylesheet"
     />
 
@@ -46,8 +46,21 @@
         "name": "SMT Enterprises",
         "url": "https://www.smtenterprises.com/",
         "description": "SMT Enterprises builds modern websites, software, SaaS products and AI-powered automation systems for businesses.",
-        "email": "hello@smtenterprises.com"
+        "email": "contact.smt.enterprises@gmail.com"
       }
+    </script>
+
+    <!-- Content is fully visible by default (see src/style.css) — nothing here
+         hides anything. The module script hides-then-reveals elements for the
+         entrance choreography, entirely on its own; if it never runs at all
+         (blocked, 404, syntax error) no hidden state is ever applied and
+         nothing changes. This timer is only a last-resort safety net for the
+         rarer case where the script starts but stalls before finishing. See
+         "Animation fallback" in README. -->
+    <script>
+      window.setTimeout(function () {
+        document.documentElement.classList.add('force-visible')
+      }, 1500)
     </script>
   </head>
   <body>
@@ -55,34 +68,23 @@
 
     <header class="site-header" id="top" data-header>
       <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="SMT Enterprises — home">
-          <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-            <rect width="64" height="64" rx="14" fill="none" stroke="currentColor" stroke-opacity="0.14" />
-            <path d="M14 40 L26 24 L34 34 L50 14" stroke="url(#navGrad)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-            <circle cx="50" cy="14" r="5" fill="url(#navGrad)" />
-            <path d="M14 48 H50" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" />
-            <defs>
-              <linearGradient id="navGrad" x1="14" y1="40" x2="50" y2="14" gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#3B82F6" />
-                <stop offset="1" stop-color="#33D9FF" />
-              </linearGradient>
-            </defs>
-          </svg>
-          <span class="brand-word"><strong>SMT</strong>&nbsp;Enterprises</span>
+        <a class="brand reveal-logo" href="#top" aria-label="SMT Enterprises — home" data-brand>
+          <img class="brand-logo-img" src="./images/smt-enterprises-logo.png" alt="SMT Enterprises" data-brand-logo />
+          <span class="brand-fallback">SMT Enterprises</span>
         </a>
 
         <nav class="main-nav" aria-label="Primary">
           <ul>
-            <li><a href="#top">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="reveal-nav-item"><a href="#top">Home</a></li>
+            <li class="reveal-nav-item"><a href="#services">Services</a></li>
+            <li class="reveal-nav-item"><a href="#solutions">Solutions</a></li>
+            <li class="reveal-nav-item"><a href="#about">About</a></li>
+            <li class="reveal-nav-item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
 
         <div class="header-actions">
-          <a class="btn btn-primary btn-sm" href="#contact">Start a Project</a>
+          <a class="btn btn-primary btn-sm reveal-nav-item" href="#contact">Start a Project</a>
           <button class="nav-toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
             <span></span><span></span><span></span>
           </button>
@@ -106,88 +108,51 @@
     <main id="main">
       <!-- Hero -->
       <section class="hero" aria-label="Introduction">
-        <div class="hero-glow hero-glow-cyan" aria-hidden="true"></div>
-        <div class="hero-glow hero-glow-violet" aria-hidden="true"></div>
+        <div class="hero-atmosphere" aria-hidden="true"></div>
         <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-ring" aria-hidden="true"></div>
         <div class="hero-particles" aria-hidden="true">
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
 
         <div class="container hero-inner">
-          <div class="hero-copy">
-            <p class="eyebrow reveal">Websites · Software · SaaS · AI Automation</p>
-            <h1 class="reveal">Technology that moves your business <span class="text-accent">forward.</span></h1>
-            <p class="hero-lead reveal">
-              SMT Enterprises builds modern websites, software, SaaS products and AI-powered automation
-              systems designed to help businesses operate smarter and grow faster.
-            </p>
-            <div class="hero-actions reveal">
-              <a class="btn btn-primary btn-lg btn-glow" href="#contact">Start a Project</a>
-              <a class="btn btn-ghost btn-lg" href="#services">Explore Services</a>
-            </div>
+          <p class="eyebrow hero-badge">Websites · Software · SaaS · AI Automation</p>
+
+          <div class="hero-headline-mask">
+            <h1 class="hero-headline">Technology that moves your business <em class="accent-word">forward.</em></h1>
           </div>
 
-          <div class="hero-visual reveal" aria-hidden="true">
-            <svg class="network" viewBox="0 0 520 520" fill="none">
-              <g class="network-lines" stroke="url(#lineGrad)" stroke-width="1.2">
-                <line x1="260" y1="258" x2="120" y2="150" />
-                <line x1="260" y1="258" x2="205" y2="66" />
-                <line x1="260" y1="258" x2="382" y2="96" />
-                <line x1="260" y1="258" x2="444" y2="232" />
-                <line x1="260" y1="258" x2="402" y2="382" />
-                <line x1="260" y1="258" x2="262" y2="446" />
-                <line x1="260" y1="258" x2="112" y2="364" />
-                <line x1="260" y1="258" x2="68" y2="234" />
-              </g>
-              <g class="network-nodes" fill="#33d9ff">
-                <circle cx="120" cy="150" r="6" />
-                <circle cx="205" cy="66" r="5" />
-                <circle cx="382" cy="96" r="5.5" />
-                <circle cx="444" cy="232" r="6" />
-                <circle cx="402" cy="382" r="5" />
-                <circle cx="262" cy="446" r="5.5" />
-                <circle cx="112" cy="364" r="5" />
-                <circle cx="68" cy="234" r="5.5" />
-              </g>
-              <circle class="network-hub" cx="260" cy="258" r="34" fill="#0d1220" stroke="url(#lineGrad)" stroke-width="1.5" />
-              <path d="M246 258 L256 268 L276 246" stroke="#33d9ff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-              <defs>
-                <linearGradient id="lineGrad" x1="0" y1="0" x2="520" y2="520" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#3b82f6" />
-                  <stop offset="1" stop-color="#33d9ff" />
-                </linearGradient>
-              </defs>
-            </svg>
+          <p class="hero-lead hero-fade-up">
+            SMT Enterprises builds modern websites, software, SaaS products and AI-powered automation
+            systems designed to help businesses operate smarter and grow faster.
+          </p>
 
-            <div class="panel panel-a">
-              <div class="panel-bar"><span></span><span></span><span></span></div>
-              <div class="panel-line" style="width: 70%"></div>
-              <div class="panel-line" style="width: 45%"></div>
-              <div class="panel-line panel-line-accent" style="width: 58%"></div>
-            </div>
-            <div class="panel panel-b">
-              <div class="panel-bar"><span></span><span></span><span></span></div>
-              <div class="panel-line" style="width: 60%"></div>
-              <div class="panel-line" style="width: 80%"></div>
-            </div>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg hero-cta-primary" href="#contact">
+              Start a Project
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path d="M3 8h9M8 3l5 5-5 5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a class="btn btn-ghost btn-lg hero-cta-secondary" href="#services">Explore Services</a>
           </div>
         </div>
 
-        <a class="scroll-cue" href="#services" aria-label="Scroll to services">
+        <a class="scroll-cue hero-cue-fade" href="#services" aria-label="Scroll to services">
           <span class="scroll-cue-track"><span class="scroll-cue-dot"></span></span>
           <span class="scroll-cue-label">Scroll</span>
         </a>
       </section>
 
       <!-- Trust strip -->
-      <section class="trust-strip" aria-label="Overview">
+      <section class="trust-strip section-fade" aria-label="Overview">
         <div class="container">
           <p class="reveal">Websites. Software. SaaS. AI Automation.<span> Built around your business.</span></p>
         </div>
       </section>
 
       <!-- Services -->
-      <section class="section" id="services" aria-labelledby="services-heading">
+      <section class="section section-fade" id="services" aria-labelledby="services-heading">
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Services</p>
@@ -199,7 +164,7 @@
           </div>
 
           <div class="grid grid-3">
-            <article class="card service-card reveal">
+            <article class="card service-card reveal-card">
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="3" y="4.5" width="18" height="15" rx="2" />
@@ -212,7 +177,7 @@
               <p>High-performance websites designed to establish credibility and convert visitors.</p>
             </article>
 
-            <article class="card service-card reveal">
+            <article class="card service-card reveal-card">
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M6 8h12l-1.2 10.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 8Z" />
@@ -223,7 +188,7 @@
               <p>Modern online stores with product, order and customer experiences built around your business.</p>
             </article>
 
-            <article class="card service-card reveal">
+            <article class="card service-card reveal-card">
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <polyline points="8 6 2 12 8 18" />
@@ -234,7 +199,7 @@
               <p>Business-specific applications and internal systems designed around real workflows.</p>
             </article>
 
-            <article class="card service-card reveal">
+            <article class="card service-card reveal-card">
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 3.5 20.5 8 12 12.5 3.5 8 12 3.5Z" />
@@ -246,7 +211,7 @@
               <p>Scalable multi-tenant SaaS platforms built for long-term growth.</p>
             </article>
 
-            <article class="card service-card reveal">
+            <article class="card service-card reveal-card">
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="2.25" />
@@ -262,7 +227,7 @@
               <p>AI-powered workflows that reduce repetitive work and help businesses operate more efficiently.</p>
             </article>
 
-            <article class="card service-card reveal">
+            <article class="card service-card reveal-card">
               <span class="card-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <line x1="5" y1="6" x2="5" y2="18" />
@@ -281,7 +246,7 @@
       </section>
 
       <!-- Featured capabilities -->
-      <section class="section section-alt" id="capabilities" aria-labelledby="capabilities-heading">
+      <section class="section section-alt section-fade" id="capabilities" aria-labelledby="capabilities-heading">
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Capabilities</p>
@@ -292,29 +257,23 @@
             </p>
           </div>
 
-          <div class="orbit reveal">
-            <div class="orbit-ring" aria-hidden="true"></div>
-            <div class="orbit-hub">
-              <span>What&nbsp;We<br />Build</span>
-            </div>
-            <ul class="orbit-nodes">
-              <li><span>Business Platforms</span></li>
-              <li><span>Customer Portals</span></li>
-              <li><span>Admin Dashboards</span></li>
-              <li><span>Order Management</span></li>
-              <li><span>CRM Systems</span></li>
-              <li><span>Inventory Systems</span></li>
-              <li><span>Automation Workflows</span></li>
-              <li><span>AI Agents</span></li>
-              <li><span>SaaS Platforms</span></li>
-              <li><span>E-commerce Systems</span></li>
-            </ul>
-          </div>
+          <ul class="capability-list reveal">
+            <li><span>Business Platforms</span></li>
+            <li><span>Customer Portals</span></li>
+            <li><span>Admin Dashboards</span></li>
+            <li><span>Order Management</span></li>
+            <li><span>CRM Systems</span></li>
+            <li><span>Inventory Systems</span></li>
+            <li><span>Automation Workflows</span></li>
+            <li><span>AI Agents</span></li>
+            <li><span>SaaS Platforms</span></li>
+            <li><span>E-commerce Systems</span></li>
+          </ul>
         </div>
       </section>
 
       <!-- Why SMT -->
-      <section class="section" id="why" aria-labelledby="why-heading">
+      <section class="section section-fade" id="why" aria-labelledby="why-heading">
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Why SMT</p>
@@ -326,7 +285,7 @@
           </div>
 
           <div class="grid grid-4">
-            <div class="why-item reveal">
+            <div class="why-item reveal-card">
               <span class="why-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <circle cx="12" cy="12" r="8.5" /><circle cx="12" cy="12" r="4.5" /><circle cx="12" cy="12" r="0.75" fill="currentColor" stroke="none" />
@@ -335,7 +294,7 @@
               <h3>Built Around Your Business</h3>
               <p>Every system is shaped by how your business actually operates, not a generic template.</p>
             </div>
-            <div class="why-item reveal">
+            <div class="why-item reveal-card">
               <span class="why-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="7" y="7" width="10" height="10" rx="1.5" />
@@ -346,7 +305,7 @@
               <h3>Modern Technology</h3>
               <p>Current frameworks and tooling — never legacy stacks that hold your business back.</p>
             </div>
-            <div class="why-item reveal">
+            <div class="why-item reveal-card">
               <span class="why-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <rect x="4" y="14" width="4" height="6" /><rect x="10" y="9" width="4" height="11" /><rect x="16" y="4" width="4" height="16" />
@@ -355,7 +314,7 @@
               <h3>Scalable Architecture</h3>
               <p>Systems designed to handle growth in traffic, data and complexity from day one.</p>
             </div>
-            <div class="why-item reveal">
+            <div class="why-item reveal-card">
               <span class="why-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M12 3 19 6v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z" stroke-linejoin="round" />
@@ -370,7 +329,7 @@
       </section>
 
       <!-- Process -->
-      <section class="section section-alt" id="process" aria-labelledby="process-heading">
+      <section class="section section-alt section-fade" id="process" aria-labelledby="process-heading">
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Process</p>
@@ -380,26 +339,31 @@
 
           <ol class="process">
             <li class="process-step reveal">
+              <span class="process-node" aria-hidden="true"></span>
               <span class="process-index">01</span>
               <h3>Discover</h3>
               <p>Understand the business, goals and requirements.</p>
             </li>
             <li class="process-step reveal">
+              <span class="process-node" aria-hidden="true"></span>
               <span class="process-index">02</span>
               <h3>Plan</h3>
               <p>Define the solution, architecture and user experience.</p>
             </li>
             <li class="process-step reveal">
+              <span class="process-node" aria-hidden="true"></span>
               <span class="process-index">03</span>
               <h3>Build</h3>
               <p>Develop the product using modern technologies.</p>
             </li>
             <li class="process-step reveal">
+              <span class="process-node" aria-hidden="true"></span>
               <span class="process-index">04</span>
               <h3>Test</h3>
               <p>Validate quality, performance, security and usability.</p>
             </li>
             <li class="process-step reveal">
+              <span class="process-node" aria-hidden="true"></span>
               <span class="process-index">05</span>
               <h3>Launch</h3>
               <p>Deploy and help the business move forward.</p>
@@ -409,11 +373,20 @@
       </section>
 
       <!-- About -->
-      <section class="section" id="about" aria-labelledby="about-heading">
+      <section class="section section-fade" id="about" aria-labelledby="about-heading">
         <div class="container about-grid">
           <div class="reveal">
             <p class="eyebrow">About</p>
             <h2 id="about-heading">SMT Enterprises</h2>
+
+            <svg class="about-graphic" viewBox="0 0 280 220" fill="none" aria-hidden="true">
+              <rect class="about-graphic-layer" x="18" y="86" width="170" height="96" rx="14" transform="rotate(-4 18 86)" />
+              <rect class="about-graphic-layer" x="46" y="58" width="170" height="96" rx="14" transform="rotate(2 46 58)" />
+              <rect class="about-graphic-layer about-graphic-layer-accent" x="74" y="30" width="170" height="96" rx="14" />
+              <line class="about-graphic-line" x1="94" y1="52" x2="200" y2="52" stroke-width="2" stroke-linecap="round" />
+              <line class="about-graphic-line" x1="94" y1="70" x2="170" y2="70" stroke-width="2" stroke-linecap="round" />
+              <circle cx="94" cy="98" r="4" class="about-graphic-dot" />
+            </svg>
           </div>
           <div class="about-copy reveal">
             <p>
@@ -430,8 +403,8 @@
         </div>
       </section>
 
-      <!-- Future / Solutions -->
-      <section class="section solutions-section" id="solutions" aria-labelledby="solutions-heading">
+      <!-- Solutions -->
+      <section class="section solutions-section section-fade" id="solutions" aria-labelledby="solutions-heading">
         <div class="container">
           <div class="section-head reveal">
             <p class="eyebrow">Solutions</p>
@@ -452,14 +425,80 @@
         </div>
       </section>
 
-      <!-- Final CTA -->
-      <section class="cta-band" id="contact" aria-labelledby="cta-heading">
+      <!-- Contact -->
+      <section class="section section-alt contact-section section-fade" id="contact" aria-labelledby="contact-heading">
         <div class="container">
-          <div class="cta-panel reveal">
-            <h2 id="cta-heading">Have an idea worth building?</h2>
-            <p>Tell us what you're trying to build, improve or automate.</p>
-            <a class="btn btn-primary btn-lg btn-glow" href="mailto:hello@smtenterprises.com">Start a Project</a>
-            <p class="cta-email">Prefer email? <a href="mailto:hello@smtenterprises.com">hello@smtenterprises.com</a></p>
+          <div class="section-head reveal">
+            <p class="eyebrow">Contact</p>
+            <h2 id="contact-heading">Start a project.</h2>
+            <p class="section-lead">Tell us about your project.</p>
+          </div>
+
+          <div class="contact-grid reveal">
+            <form class="contact-form" id="contact-form" novalidate>
+              <!-- Honeypot: invisible to real visitors (off-screen, aria-hidden,
+                   unreachable by keyboard), but a naive spam bot that fills every
+                   field will trip it. Formspree silently discards submissions
+                   where this field is non-empty. -->
+              <div class="form-honeypot" aria-hidden="true">
+                <label for="cf-company-hp">Leave this field empty</label>
+                <input type="text" id="cf-company-hp" name="_gotcha" tabindex="-1" autocomplete="off" />
+              </div>
+              <input type="hidden" name="_subject" value="New inquiry — SMT Enterprises website" />
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="cf-name">Full Name<span aria-hidden="true">*</span></label>
+                  <input type="text" id="cf-name" name="name" autocomplete="name" minlength="2" required />
+                </div>
+                <div class="form-field">
+                  <label for="cf-company">Business / Company</label>
+                  <input type="text" id="cf-company" name="company" autocomplete="organization" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="cf-email">Email Address<span aria-hidden="true">*</span></label>
+                  <input type="email" id="cf-email" name="email" autocomplete="email" required />
+                </div>
+                <div class="form-field">
+                  <label for="cf-phone">Phone / WhatsApp</label>
+                  <input type="tel" id="cf-phone" name="phone" autocomplete="tel" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="cf-service">Service</label>
+                <select id="cf-service" name="service">
+                  <option value="">Select a service</option>
+                  <option>Business Website</option>
+                  <option>E-commerce</option>
+                  <option>Custom Software</option>
+                  <option>SaaS Development</option>
+                  <option>AI Automation</option>
+                  <option>UI/UX &amp; Digital Solutions</option>
+                  <option>Other</option>
+                </select>
+              </div>
+
+              <div class="form-field">
+                <label for="cf-message">Message<span aria-hidden="true">*</span></label>
+                <textarea id="cf-message" name="message" rows="5" minlength="10" required></textarea>
+              </div>
+
+              <div class="form-footer">
+                <button type="submit" class="btn btn-primary btn-lg" data-submit-btn>
+                  <span data-btn-label>Send Inquiry</span>
+                </button>
+                <p class="form-status" role="status" aria-live="polite" data-form-status></p>
+              </div>
+            </form>
+
+            <aside class="contact-aside">
+              <p class="contact-aside-label">Direct</p>
+              <a class="contact-email" href="mailto:contact.smt.enterprises@gmail.com">contact.smt.enterprises@gmail.com</a>
+            </aside>
           </div>
         </div>
       </section>
@@ -468,20 +507,15 @@
     <footer class="site-footer">
       <div class="container footer-grid">
         <div class="footer-brand">
-          <a class="brand" href="#top" aria-label="SMT Enterprises — home">
-            <svg class="brand-mark" viewBox="0 0 64 64" fill="none" aria-hidden="true">
-              <rect width="64" height="64" rx="14" fill="none" stroke="currentColor" stroke-opacity="0.14" />
-              <path d="M14 40 L26 24 L34 34 L50 14" stroke="#33D9FF" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
-              <circle cx="50" cy="14" r="5" fill="#33D9FF" />
-              <path d="M14 48 H50" stroke="#3B82F6" stroke-width="5" stroke-linecap="round" />
-            </svg>
-            <span class="brand-word"><strong>SMT</strong>&nbsp;Enterprises</span>
+          <a class="brand" href="#top" aria-label="SMT Enterprises — home" data-brand>
+            <img class="brand-logo-img" src="./images/smt-enterprises-logo.png" alt="SMT Enterprises" data-brand-logo />
+            <span class="brand-fallback">SMT Enterprises</span>
           </a>
           <p>Technology. Software. AI. Digital Solutions.</p>
         </div>
 
         <nav class="footer-nav" aria-label="Site">
-          <h3>Explore</h3>
+          <h3>Navigation</h3>
           <ul>
             <li><a href="#top">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -493,7 +527,7 @@
 
         <div class="footer-contact">
           <h3>Contact</h3>
-          <p><a href="mailto:hello@smtenterprises.com">hello@smtenterprises.com</a></p>
+          <p><a href="mailto:contact.smt.enterprises@gmail.com">contact.smt.enterprises@gmail.com</a></p>
         </div>
       </div>
 
